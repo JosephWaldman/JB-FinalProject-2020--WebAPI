@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CarFields">
+    <Key>
+      <PropertyRef Name="LicensePlateNumber" />
+    </Key>
+    <Property Name="LicensePlateNumber" Type="int" Nullable="false" />
+    <Property Name="CarTypeID" Type="int" Nullable="false" />
+    <Property Name="CurrentKilometrage" Type="int" Nullable="false" />
+    <Property Name="Picture" Type="varchar(max)" />
+    <Property Name="IsRepaired" Type="bit" Nullable="false" />
+    <Property Name="IsAvailable" Type="bit" Nullable="false" />
+    <Property Name="Branch" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CarRentalFields">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="LicensePlateNumber" Type="int" Nullable="false" />
+    <Property Name="RentalStartDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReturnCarDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReturnCarDateApproval" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CarTypes">
+    <Key>
+      <PropertyRef Name="CarTypeID" />
+    </Key>
+    <Property Name="ID" Type="nchar" MaxLength="10" />
+    <Property Name="CarTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ManufacturerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DailyCost" Type="int" Nullable="false" />
+    <Property Name="DailyMonetaryFine" Type="int" Nullable="false" />
+    <Property Name="ManufactureYear" Type="int" Nullable="false" />
+    <Property Name="GearBox" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserFields">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DriverLicense" Type="int" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Birthdate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Thumbnail" Type="varchar(max)" />
+    <Property Name="Rank" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="DatabaseModelStoreContainer">
+    <EntitySet Name="CarFields" EntityType="Self.CarFields" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarRentalFields" EntityType="Self.CarRentalFields" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CarTypes" EntityType="Self.CarTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserFields" EntityType="Self.UserFields" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

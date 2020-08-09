@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="dbEntities">
+    <EntitySetMapping Name="CarFields">
+      <EntityTypeMapping TypeName="DatabaseModel.CarField">
+        <MappingFragment StoreEntitySet="CarFields">
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="IsAvailable" ColumnName="IsAvailable" />
+          <ScalarProperty Name="IsRepaired" ColumnName="IsRepaired" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="CurrentKilometrage" ColumnName="CurrentKilometrage" />
+          <ScalarProperty Name="CarTypeID" ColumnName="CarTypeID" />
+          <ScalarProperty Name="LicensePlateNumber" ColumnName="LicensePlateNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarTypes">
+      <EntityTypeMapping TypeName="DatabaseModel.CarType">
+        <MappingFragment StoreEntitySet="CarTypes">
+          <ScalarProperty Name="GearBox" ColumnName="GearBox" />
+          <ScalarProperty Name="ManufactureYear" ColumnName="ManufactureYear" />
+          <ScalarProperty Name="DailyMonetaryFine" ColumnName="DailyMonetaryFine" />
+          <ScalarProperty Name="DailyCost" ColumnName="DailyCost" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="CarTypeID" ColumnName="CarTypeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarRentalFields">
+      <EntityTypeMapping TypeName="DatabaseModel.CarRentalField">
+        <MappingFragment StoreEntitySet="CarRentalFields">
+          <ScalarProperty Name="ReturnCarDateApproval" ColumnName="ReturnCarDateApproval" />
+          <ScalarProperty Name="ReturnCarDate" ColumnName="ReturnCarDate" />
+          <ScalarProperty Name="RentalStartDate" ColumnName="RentalStartDate" />
+          <ScalarProperty Name="LicensePlateNumber" ColumnName="LicensePlateNumber" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserFields">
+      <EntityTypeMapping TypeName="DatabaseModel.UserField">
+        <MappingFragment StoreEntitySet="UserFields">
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="Thumbnail" ColumnName="Thumbnail" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="DriverLicense" ColumnName="DriverLicense" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
